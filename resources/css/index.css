@@ -77,6 +77,10 @@ html {
   margin: 45px 0;
 }
 
+.red {
+  color: red;
+}
+
 .written_sermon_banner, .teaching_banner {
   min-height: 40vh;
   background-size: cover;
