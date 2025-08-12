@@ -91,7 +91,15 @@ $(document).ready(function() {
       $('.modal').on('hide.bs.modal', function() {
         var memory = $(this).html();
         $(this).html(memory);
-      })
+      });
+          // Attach an event listener to all audio elements for the 'play' event
+    $('audio').on('play', function() {
+        // When an audio element starts playing, iterate through all other audio elements
+        $('audio').not(this).each(function() {
+            // Pause any other audio elements that are currently playing
+            this.pause();
+        });
+    });
 
 
     
